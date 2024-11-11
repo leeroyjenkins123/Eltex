@@ -1,0 +1,5 @@
+.vscode/
+*/*.o
+
+#Ignore for task1
+task1/task_1_*
