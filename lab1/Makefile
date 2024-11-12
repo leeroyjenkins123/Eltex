@@ -1,21 +1,20 @@
 CC = gcc
 CFLAGS = -Wall -Werror
 
-SRC = task_1_1.c task_1_2.c task_1_3.c task_1_4.c
-RUNS = task_1_1 task_1_2 task_1_3 task_1_4
+RUNS = lab_1_1 lab_1_2 lab_1_3 lab_1_4
 
 all: $(RUNS)
 
-task_1_1: task_1_1.c
+lab_1_1: lab_1_1.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-task_1_2: task_1_2.c
+lab_1_2: lab_1_2.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-task_1_3: task_1_3.c
+lab_1_3: lab_1_3.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-task_1_4: task_1_4.c
+lab_1_4: lab_1_4.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
