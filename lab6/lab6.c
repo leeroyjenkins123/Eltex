@@ -132,6 +132,18 @@ void find_abonent(){
     }
 }
 
+void free_abonents(){
+    struct abonent *temp = head;
+    while (temp != NULL)
+    {
+        struct abonent *next = temp->next;
+        free(temp);
+        temp = next;
+    }
+    head = NULL;
+    free(head);
+}
+
 int main()
 {
     while (1)
@@ -156,6 +168,7 @@ int main()
             break;
         case 5:
             printf("Выход из программы.\n");
+            free_abonents();
             return 0;
             break;
         }
