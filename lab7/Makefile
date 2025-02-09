@@ -10,7 +10,7 @@ SRCS = add.c div.c sub.c mult.c
 OBJS = $(SRCS:.c=.o)
 OBJS := $(addprefix $(OBJ_DIR)/, $(OBJS))
 LIB = $(OBJ_DIR)/libcalculator.a
-MAIN = main
+MAIN = lab_7
 
 all: $(MAIN)
 
