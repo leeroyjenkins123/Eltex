@@ -16,7 +16,7 @@ all: $(MAIN)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR) 
-	$(CC) -c $< -o $@
+	$(CC) -fPIC -c $< -o $@
 
 $(LIB): $(OBJS)
 	$(CC) -shared -o $@  $^
