@@ -1,6 +1,6 @@
 CC = gcc
 AR = ar
-LDFLAGS = -Lobj -lcalculator
+LDFLAGS = -Lobj -lcalculator -lncurses
 
 SRC_DIR = include
 OBJ_DIR = obj
