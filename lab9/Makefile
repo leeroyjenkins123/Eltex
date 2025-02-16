@@ -5,7 +5,7 @@ LDFLAGS = -Lobj -lfilemanager -lncurses
 SRC_DIR = include
 OBJ_DIR = obj
 
-SRCS = change_directory.c display_panels.c init.c load_files.c menu.c
+SRCS = change_directory.c display_panels.c init_panels.c load_files.c menu.c
 OBJS = $(SRCS:.c=.o)
 OBJS := $(addprefix $(OBJ_DIR)/, $(OBJS))
 LIB = $(OBJ_DIR)/libfilemanager.a
