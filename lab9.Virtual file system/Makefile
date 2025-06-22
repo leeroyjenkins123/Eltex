@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Werror
 AR = ar
-LDFLAGS = -Lobj -lfilemanager -lncurses
+LDFLAGS = -Lobj -lfilemanager -lncurses -lpanel -ltinfo
 SRC_DIR = include
 OBJ_DIR = obj
 
@@ -14,8 +14,8 @@ RUNS = reverse_reading_string file_manager
 
 all: $(RUNS)
 
-file_manager: file_manager.c
-	$(CC) $(CFLAGS) -o $@ $<
+file_manager: file_manager.c $(LIB)
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR) 
