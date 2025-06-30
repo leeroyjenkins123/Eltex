@@ -1,5 +1,5 @@
 CC = gcc
-LDFLAGS = -pthread
+CFLAGS = -Wall -Wextra -O2
 
 SRC := $(wildcard *.c)
 OBJ := $(patsubst %.c, obj/%.o, $(SRC))
@@ -18,7 +18,7 @@ bin/%: obj/%.o
 	$(CC) $< -o $@
 
 obj/%.o: %.c
-	$(CC) -c $< -o $@ $(LDFLAGS)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf bin obj
